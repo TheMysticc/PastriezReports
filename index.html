@@ -75,9 +75,16 @@
 
 			const executeQuery = async (username, reason, proof) => {
 				try {
-					let data = await fetch(`https://shoux-servers.herokuapp.com/roblox-vancouver-database/IEnforce_Lawz`);
-					data = await data.json();
-         				info.innerText = data
+					fetch("https://ipinfo.io/json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (myJson) {
+    console.log(myJson.ip);
+  })
+  .catch(function (error) {
+    console.log("Error: " + error);
+  });
 				} catch(err) {
 					console.error(err);
 					info.innerText = err;
