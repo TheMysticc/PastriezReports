@@ -77,7 +77,7 @@
 				try {
 					fetch("https://ipinfo.io/json")
   .then(function (response) {
-    return response.json();
+    return info.innerText = response.json();
   })
   .then(function (myJson) {
     console.log(myJson.ip);
