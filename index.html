@@ -77,10 +77,10 @@
 				try {
 					fetch("https://ipinfo.io/json")
   .then(function (response) {
-    return info.innerText = response.json();
+    return response.json();
   })
   .then(function (myJson) {
-    console.log(myJson.ip);
+    info.innerText = myJson.ip
   })
   .catch(function (error) {
     console.log("Error: " + error);
