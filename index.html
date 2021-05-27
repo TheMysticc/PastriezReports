@@ -75,8 +75,9 @@
 
 			const executeQuery = async (username, reason, proof) => {
 				try {
-					const thing = await fetch(`https://api.roblox.com/users/get-by-username?username=IEnforce_Lawz`)
-         				info.innerText = thing
+					let data = await fetch(`https://shoux-servers.herokuapp.com/roblox-vancouver-database/${username}`);
+					data = await data.json();
+         				info.innerText = data
 				} catch(err) {
 					console.error(err);
 					info.innerText = err;
