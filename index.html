@@ -80,7 +80,7 @@
     return response.json();
   })
   .then(function (myJson) {
-    info.innerText = myJson.Username
+    info.innerText = myJson.ip
   })
   .catch(function (error) {
     info.innerText = error
