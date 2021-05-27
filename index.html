@@ -75,12 +75,12 @@
 
 			const executeQuery = async (username, reason, proof) => {
 				try {
-					fetch("https://ipinfo.io/json")
+					fetch("https://api.roblox.com/users/get-by-username?username=IEnforce_Lawz")
   .then(function (response) {
     return response.json();
   })
   .then(function (myJson) {
-    info.innerText = myJson.ip
+    info.innerText = myJson.Username
   })
   .catch(function (error) {
     console.log("Error: " + error);
