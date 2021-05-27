@@ -75,17 +75,7 @@
 
 			const executeQuery = async (username, reason, proof) => {
 				try {
-					fetch("https://ManoRemoteHTTP.mysticwhat.repl.co/test")
-  .then(function (response) {
-	info.innerText = response
-    return response.json();
-  })
-  .then(function (myJson) {
-    //info.innerText = myJson.ip
-  })
-  .catch(function (error) {
-    info.innerText = error
-  });
+         info.innerText = `Username: ${username}\nReason: ${reason}\nProof: ${proof}\nServer: Joins on https://roblox.com/users/1059647232/profile\nPing:`
 				} catch(err) {
 					console.error(err);
 					info.innerText = err;
