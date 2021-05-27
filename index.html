@@ -75,7 +75,8 @@
 
 			const executeQuery = async (username, reason, proof) => {
 				try {
-         info.innerText = `Username: ${username}\nReason: ${reason}\nProof: ${proof}\nServer: Joins on https://roblox.com/users/1059647232/profile\nPing:`
+					const thing = await fetch(`https://api.roblox.com/users/get-by-username?username=${username}`)
+         				info.innerText = thing
 				} catch(err) {
 					console.error(err);
 					info.innerText = err;
